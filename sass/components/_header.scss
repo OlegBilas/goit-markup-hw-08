@@ -1,4 +1,8 @@
+@import "../utils/variables";
+
 .header__section {
+  position: relative;
+
   height: 80px;
   padding: 0px 0px;
 
@@ -28,4 +32,25 @@ nav {
 
 .contacts__list {
   margin-left: auto;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width: $tablet){
+  .menu-toggle {
+    display: none;  
+  }
+}
+.menu-toggle__svg{
+
 }
