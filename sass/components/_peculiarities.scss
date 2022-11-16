@@ -1,0 +1,28 @@
+.peculiarities__list {
+    @extend %cards__list;
+}
+.peculiarities__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: $background-btn;
+    border-radius: 4px;
+}
+
+.peculiarities__title {
+    margin-bottom: 10px;
+
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 1.14;
+    color: $header-color;
+}
+
+.peculiarities__text {
+    line-height: 1.71;
+}

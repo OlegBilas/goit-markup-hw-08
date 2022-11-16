@@ -1,0 +1,29 @@
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+
+  color: $social-link-color;
+  transition: color 250ms $timing-function;
+  border: 1px solid $social-link-color;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+}
+
+.clients__svg {
+  fill: currentColor;
+}

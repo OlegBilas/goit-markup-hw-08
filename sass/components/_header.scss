@@ -1,0 +1,31 @@
+.header__section {
+  height: 80px;
+  padding: 0px 0px;
+
+  border-bottom: 1px solid #ececec;
+}
+.header__container {
+  display: flex;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+
+  color: inherit;
+}
+
+.link__icon-email,
+.link__icon-phone {
+  margin-right: 10px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.contacts__list {
+  margin-left: auto;
+}

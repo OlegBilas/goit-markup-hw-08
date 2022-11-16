@@ -1,0 +1,184 @@
+@import "../utils/variables";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 528px;
+  min-height: 581px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  background: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+
+  .backdrop.is-hidden & {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  .backdrop & {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal__text {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+
+  color: $header-color;
+}
+
+.inputs-container {
+  width: 448px;
+  margin: 0 40px;
+}
+
+.inputs-field__label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  letter-spacing: 0.01em;
+
+  color: $main-color;
+}
+
+.inputs-field {
+  position: relative;
+}
+
+.inputs-field__input {
+  display: block;
+
+  width: 448px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border 250ms $timing-function, box-shadow 250ms $timing-function;
+
+  &:focus {
+    border-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.inputs-field__svg {
+  display: inline-block;
+  position: absolute;
+  top: 28px;
+  left: 12px;
+
+  transition: fill 250ms $timing-function;
+
+  .inputs-field__input:focus + & {
+    fill: $accent-color;
+  }
+}
+
+.inputs-field__textarea {
+  resize: none;
+  height: 120px;
+
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.agreement-field {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 425px;
+  margin: 0 auto 30px;
+}
+
+.agreement-field__label {
+  margin-left: 24px;
+
+  line-height: calc(24 / 14);
+
+  color: $main-color;
+}
+
+.agreement-field__accept,
+.agreement-field__no-accept {
+  display: inline-block;
+
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  transform: translateY(-50%);
+}
+
+.agreement-field__accept {
+  opacity: 0;
+  transition: opacity 250ms $timing-function;
+
+  .agreement-field__input:checked ~ & {
+    opacity: 1;
+  }
+}
+
+.agreement-field__no-accept {
+  opacity: 1;
+  transition: opacity 250ms $timing-function;
+
+  .agreement-field__input:checked ~ & {
+    opacity: 0;
+  }
+}
+
+.agreement-field__link {
+  color: $accent-color;
+}

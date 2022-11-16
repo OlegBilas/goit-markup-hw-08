@@ -1,0 +1,104 @@
+.address-list__link {
+  margin-bottom: 9px;
+
+  font-weight: inherit;
+  line-height: 1.71;
+  letter-spacing: inherit;
+  color: $white-color;
+}
+
+.address-list__contacts {
+  font-weight: inherit;
+  line-height: 1.71;
+  letter-spacing: inherit;
+  color: $footer-text;
+}
+address {
+  font-style: normal;
+}
+
+.address-list__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background-section;
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer-contacts {
+  margin-right: 70px;
+}
+
+.footer-social-container {
+  margin-right: 93px;
+}
+
+.footer-social-container__text,
+.form-mailing__text {
+  margin-top: 12px;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: $white-color;
+}
+footer .social-list__svg {
+  fill: $white-color;
+}
+
+.form-mailing__thumb {
+  display: flex;
+  align-items: center;
+}
+
+.form-mailing__field {
+  display: inline-block;
+  position: relative;
+
+  margin-right: 12px;
+}
+
+.form-mailing__input {
+  width: 358px;
+  height: 50px;
+
+  padding-left: 16px;
+
+  color: $white-color;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.form-mailing__label {
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: transform 250ms $timing-function;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: calc(20 / 16);
+
+  color: $footer-text;
+
+  .form-mailing__input:focus + & {
+    transform: translate(-70px, -50%);
+  }
+}
+
+.form-mailing__svg {
+  margin-left: 10px;
+}
