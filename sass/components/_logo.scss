@@ -1,13 +1,13 @@
 $logo: "logo";
 
 .logo {
-  margin-right: 93px;
+  margin-right: auto;
 
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: inherit;
 
   &--blue {
@@ -19,11 +19,18 @@ $logo: "logo";
   &--white {
     color: $white-color;
   }
+  @media screen and (min-width: $tablet) {
+    margin-right: 87px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
 }
 
 .header__#{$logo} {
-  margin-top: 24px;
-  margin-bottom: 25px;
 }
 .footer__#{$logo} {
   margin: 0px 0px 20px;

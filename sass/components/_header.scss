@@ -14,6 +14,11 @@
 nav {
   display: flex;
   align-items: center;
+  height: 60px;
+
+  @media screen and (min-width: $desktop) {
+    height: 80px;
+  }
 }
 
 .nav__link {
@@ -38,19 +43,34 @@ nav {
   position: absolute;
   top: 15px;
   right: 10px;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 }
 
-@media screen and (min-width: $tablet){
+@media screen and (min-width: $tablet) {
   .menu-toggle {
-    display: none;  
+    display: none;
   }
 }
-.menu-toggle__svg{
-
+.menu-toggle__svg {
+  .menu-container.is-open &--open {
+    display: none;
+  }
+  &--open {
+    display: block;
+  }
+  .menu-container.is-open &--close {
+    display: block;
+  }
+  &--close {
+    display: none;
+  }
+}
+.menu-container {
 }

@@ -1,12 +1,29 @@
-.list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (max-width: $mobile) {
+  .menu-container {
+    display: none;
+  }
+  .menu-container.is-open {
+    display: block;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .list__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.list__item:not(:last-child) {
-  margin-right: 50px;
-}
 .social-list {
   display: inline-flex;
   justify-content: space-between;

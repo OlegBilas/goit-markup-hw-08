@@ -49,12 +49,22 @@ ul {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .title {
@@ -65,22 +75,35 @@ ul {
   color: #212121;
 }
 
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 480px) {
+  .menu-container {
+    display: none;
+  }
+  .menu-container.is-open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
 }
-
-.list__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .list__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-
 .social-list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -151,12 +174,12 @@ ul {
 }
 
 .logo {
-  margin-right: 93px;
+  margin-right: auto;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: inherit;
 }
 .logo--blue {
@@ -168,10 +191,17 @@ ul {
 .logo--white {
   color: #ffffff;
 }
-
-.header__logo {
-  margin-top: 24px;
-  margin-bottom: 25px;
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.1923076923;
+  }
 }
 
 .footer__logo {
@@ -307,6 +337,12 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 60px;
+}
+@media screen and (min-width: 1200px) {
+  nav {
+    height: 80px;
+  }
 }
 
 .nav__link {
@@ -345,6 +381,7 @@ nav {
           align-items: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -352,6 +389,19 @@ nav {
     display: none;
   }
 }
+.menu-container.is-open .menu-toggle__svg--open {
+  display: none;
+}
+.menu-toggle__svg--open {
+  display: block;
+}
+.menu-container.is-open .menu-toggle__svg--close {
+  display: block;
+}
+.menu-toggle__svg--close {
+  display: none;
+}
+
 .address-list__link {
   margin-bottom: 9px;
   font-weight: inherit;
