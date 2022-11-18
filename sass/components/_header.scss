@@ -10,15 +10,16 @@
 }
 .header__container {
   display: flex;
+
+  align-items: center;
+  height: 60px;
+  @media screen and (min-width: $desktop) {
+    height: 80px;
+  }
 }
 nav {
   display: flex;
   align-items: center;
-  height: 60px;
-
-  @media screen and (min-width: $desktop) {
-    height: 80px;
-  }
 }
 
 .nav__link {
@@ -71,6 +72,4 @@ nav {
   &--close {
     display: none;
   }
-}
-.menu-container {
 }

@@ -56,7 +56,7 @@ ul {
   margin-right: auto;
   padding: 0 15px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     max-width: 768px;
   }
@@ -75,19 +75,6 @@ ul {
   color: #212121;
 }
 
-@media screen and (max-width: 480px) {
-  .menu-container {
-    display: none;
-  }
-  .menu-container.is-open {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-}
 @media screen and (min-width: 768px) {
   .list {
     display: -webkit-box;
@@ -328,6 +315,15 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    height: 80px;
+  }
 }
 
 nav {
@@ -337,12 +333,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
-}
-@media screen and (min-width: 1200px) {
-  nav {
-    height: 80px;
-  }
 }
 
 .nav__link {
