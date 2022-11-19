@@ -6,8 +6,9 @@
   }
 
   .list__item:not(:last-child) {
-    margin-bottom: 32px;
-
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 32px;
+    }
     @media screen and (min-width: $tablet) {
       margin-right: 50px;
     }
@@ -48,4 +49,13 @@
 
 .social-list__svg {
   fill: currentColor;
+}
+
+.list.contacts__list {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    display: block;
+  }
+  & .list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }

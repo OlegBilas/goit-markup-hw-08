@@ -1,7 +1,11 @@
 .clients__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
+  @media screen and (max-width: $desktop) {
+    flex-wrap: wrap;
+  }
 }
 
 .clients__link {
@@ -9,7 +13,6 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
   height: 92px;
 
   color: $social-link-color;
@@ -26,4 +29,15 @@
 
 .clients__svg {
   fill: currentColor;
+}
+
+.clients__item {
+  flex-basis: calc(100% / 2 - 2 * 30px);
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 3 * 30px);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: 170px;
+  }
 }
