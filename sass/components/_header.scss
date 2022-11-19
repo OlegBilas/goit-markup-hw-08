@@ -1,9 +1,8 @@
-@import "../utils/variables";
+@import '../utils/variables';
 
 .header__section {
   position: relative;
 
-  height: 80px;
   padding: 0px 0px;
 
   border-bottom: 1px solid #ececec;
@@ -52,24 +51,39 @@ nav {
   border: none;
 
   cursor: pointer;
-}
 
-@media screen and (min-width: $tablet) {
-  .menu-toggle {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
+
 .menu-toggle__svg {
-  .menu-container.is-open &--open {
+  .menu-toggle.is-open &--open {
     display: none;
   }
   &--open {
     display: block;
   }
-  .menu-container.is-open &--close {
+  .menu-toggle.is-open &--close {
     display: block;
   }
   &--close {
     display: none;
+  }
+}
+
+.menu-container {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu-container.is-open {
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
   }
 }
