@@ -6,7 +6,11 @@
   }
 
   .list__item:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -30,8 +34,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  transition: color 250ms $timing-function,
-    background-color 250ms $timing-function;
+  transition: color 250ms $timing-function, background-color 250ms $timing-function;
 
   &:hover,
   &:focus {
