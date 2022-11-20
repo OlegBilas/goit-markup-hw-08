@@ -1,28 +1,42 @@
 .peculiarities__list {
-    @extend %cards__list;
+  @extend %cards__list;
 }
+
+.peculiarities__list > li {
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+}
+
 .peculiarities__thumb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
 
-    background-color: $background-btn;
-    border-radius: 4px;
+  background-color: $background-btn;
+  border-radius: 4px;
 }
 
 .peculiarities__title {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    font-size: inherit;
-    font-weight: 700;
-    line-height: 1.14;
-    color: $header-color;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 1.14;
+  color: $header-color;
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
 }
 
 .peculiarities__text {
-    line-height: 1.71;
+  line-height: 1.71;
 }
