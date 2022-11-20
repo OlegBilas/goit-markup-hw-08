@@ -2,8 +2,15 @@
   background-color: $background-btn;
 }
 
+.section__our-team .container {
+  text-align: center;
+}
+
 .our-team__list {
   @extend %cards__list;
+  @media screen and (min-width: $tablet) {
+    flex-wrap: wrap;
+  }
 }
 
 .our-team__img {

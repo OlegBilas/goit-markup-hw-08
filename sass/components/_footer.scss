@@ -19,7 +19,10 @@ address {
 }
 
 .address-list__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__section {
@@ -40,24 +43,42 @@ address {
     display: flex;
     justify-content: space-around;
     align-items: start;
+
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
 .footer-contacts {
+  @media screen and (max-width: $tablet - 1px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: $desktop) {
     margin-right: 70px;
   }
 }
 
 .footer-social-container {
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: $tablet - 1px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
     margin-right: 93px;
+  }
+}
+
+.footer-social-container,
+.form-mailing {
+  @media screen and (min-width: $desktop) {
+    margin-top: 12px;
   }
 }
 
 .footer-social-container__text,
 .form-mailing__text {
-  margin-top: 12px;
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -77,13 +98,15 @@ footer .social-list__svg {
 }
 
 .form-mailing__field {
+  position: relative;
   display: inline-block;
 
-  margin-right: 12px;
-}
-
-.form-mailing__field--container {
-  position: relative;
+  @media screen and (max-width: $desktop - 1px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
+  }
 }
 
 .form-mailing__input {
@@ -98,9 +121,6 @@ footer .social-list__svg {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
-  @media screen and (max-width: $tablet) {
-    margin-bottom: 20px;
-  }
   @media screen and (min-width: $desktop) {
     width: 358px;
   }
@@ -123,6 +143,11 @@ footer .social-list__svg {
 
   .form-mailing__input:focus + & {
     transform: translate(-70px, -50%);
+  }
+  @media screen and (max-width: $mobile) {
+    .form-mailing__input:focus + & {
+      transform: translate(0%, -50px);
+    }
   }
 }
 

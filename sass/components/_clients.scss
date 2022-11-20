@@ -1,6 +1,6 @@
 .clients__list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   @media screen and (max-width: $desktop) {
