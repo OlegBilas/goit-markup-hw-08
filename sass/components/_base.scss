@@ -53,10 +53,13 @@ ul {
   // min-width: $mobile;
   min-width: 100vw;
   @media screen and (min-width: $mobile) and (max-width: $tablet - 1px) {
+    max-width: $mobile;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     max-width: $tablet;
   }
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
+  @media screen and (min-width: $tablet) {
+    max-width: $desktop;
   }
 }
 
