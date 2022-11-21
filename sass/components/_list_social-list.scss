@@ -9,10 +9,10 @@
 }
 
 .list__item:not(:last-child) {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 32px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     margin-right: 50px;
   }
 }
@@ -54,11 +54,11 @@
 }
 
 .list.contacts__list {
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     display: block;
-  }
-  & .list__item:not(:last-child) {
-    margin-bottom: 10px;
+    & .list__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 

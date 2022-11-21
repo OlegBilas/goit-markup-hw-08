@@ -32,7 +32,7 @@
   line-height: 1.14;
   color: $header-color;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     text-align: center;
   }
 }

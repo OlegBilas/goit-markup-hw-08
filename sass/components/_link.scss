@@ -7,7 +7,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     .header__container & {
       font-size: 40px;
       line-height: calc(47 / 40);
@@ -32,7 +32,7 @@
       content: '';
 
       position: absolute;
-      top: 275%;
+      top: 220%;
       left: 0;
 
       width: 100%;
@@ -41,5 +41,8 @@
       border-radius: 2px;
       background: currentColor;
     }
+  }
+  @media screen and (min-width: $desktop) {
+    top: 275%;
   }
 }

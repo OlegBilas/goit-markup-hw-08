@@ -19,12 +19,8 @@ $logo: 'logo';
   &--white {
     color: $white-color;
   }
-  @media screen and (min-width: $tablet) and (min-width: $desktop - 1px) {
-    margin-right: 87px;
-  }
 
   @media screen and (min-width: $desktop) {
-    margin-right: 93px;
     font-size: 26px;
     line-height: calc(31 / 26);
   }
@@ -34,7 +30,7 @@ $logo: 'logo';
 }
 .footer__#{$logo} {
   margin: 0px 0px 20px;
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     text-align: center;
   }
 }

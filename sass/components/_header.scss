@@ -1,6 +1,6 @@
-@import '../utils/variables';
-
 .header__section {
+  position: relative;
+
   padding: 0px 0px;
 
   border-bottom: 1px solid #ececec;
@@ -17,7 +17,7 @@
 nav {
   display: flex;
   align-items: center;
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 302px;
   }
 }
@@ -31,7 +31,7 @@ nav {
 
 .link__icon-email,
 .link__icon-phone {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     display: none;
   }
   margin-right: 10px;
@@ -41,9 +41,12 @@ nav {
 
 .contacts__list {
   margin-left: auto;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    margin-left: 96px;
+  }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: $tablet - 1px) {
   .header__container .contacts__list {
     display: flex;
     flex-direction: column-reverse;
@@ -95,32 +98,38 @@ nav {
     display: block;
   }
 
-  &--close:hover,
-  &--close:focus {
+  .menu-toggle:hover &--close,
+  .menu-toggle:focus &--close {
     fill: $accent-color;
     cursor: pointer;
   }
 }
 
 .menu-container {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     display: none;
-    overflow-y: scroll;
   }
 
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    // max-width: 100vw;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 950px;
+  }
 }
 
 .menu-container.is-open {
-  @media screen and (max-width: $mobile) {
-    position: flex;
+  @media screen and (max-width: $tablet - 1px) {
+    position: absolute;
     top: 0;
     left: 0;
-
-    display: block;
     width: 100vw;
     height: 100vh;
+    display: block;
+    overflow-y: hidden;
+
     padding: 48px 40px;
 
     background: $white-color;
@@ -129,7 +138,7 @@ nav {
   }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: $tablet - 1px) {
   .mobile-social-list {
     display: flex;
     justify-content: flex-start;

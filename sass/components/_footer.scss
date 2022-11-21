@@ -144,7 +144,7 @@ footer .social-list__svg {
   .form-mailing__input:focus + & {
     transform: translate(-70px, -50%);
   }
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet - 1px) {
     .form-mailing__input:focus + & {
       transform: translate(0%, -50px);
     }
