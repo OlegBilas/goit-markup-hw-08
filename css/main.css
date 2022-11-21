@@ -1186,6 +1186,12 @@ footer .social-list__svg {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
   }
+  .portfolio__item:nth-child(2) .portfolio__link {
+    padding-bottom: 0;
+  }
+  .portfolio__item:nth-child(2) .portfolio__thumb {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .portfolio__item {
