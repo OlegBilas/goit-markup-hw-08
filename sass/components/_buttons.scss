@@ -41,19 +41,17 @@
 }
 
 // Portfolio
-@media screen and (max-width: $tablet - 1px) {
-  .portfolio-btns {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .portfolio-btns__item:not(:last-child) {
-    margin-right: 8px;
+.portfolio-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
 .portfolio-btns {
   margin-bottom: 40px;
   @media screen and (min-width: $tablet) {

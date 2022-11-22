@@ -93,6 +93,7 @@ nav {
 
   &--close {
     display: none;
+    transition: fill 250ms $timing-function;
   }
   .menu-toggle.is-open &--close {
     display: block;
