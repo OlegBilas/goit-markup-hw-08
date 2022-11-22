@@ -125,7 +125,14 @@
   letter-spacing: 0.01em;
 
   &::placeholder {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+
     color: rgba(117, 117, 117, 0.5);
+    @media screen and (min-width: $desktop) {
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 }
 
@@ -134,19 +141,21 @@
   align-items: center;
 
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
 
-  // width: 425px;
   margin: 0 auto 30px;
 }
 
 .agreement-field__label {
   margin-left: 24px;
 
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
 
   color: $main-color;
+  @media screen and(min-width: $desktop) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .agreement-field__accept,
