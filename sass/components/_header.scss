@@ -18,7 +18,7 @@ nav {
   display: flex;
   align-items: center;
   @media screen and (max-width: $tablet - 1px) {
-    margin-bottom: 302px;
+    margin-bottom: 306px;
   }
 }
 
@@ -52,10 +52,12 @@ nav {
     flex-direction: column-reverse;
     color: $accent-color;
   }
-  .header__container .contacts__link[href='mailto:info@devstudio.com'] {
+  .header__container .list__item:not(:last-child) {
     margin-top: 32px;
     margin-bottom: 64px;
+  }
 
+  .header__container .contacts__link[href='mailto:info@devstudio.com'] {
     font-weight: 500;
     font-size: 24px;
     line-height: calc(28 / 24);
