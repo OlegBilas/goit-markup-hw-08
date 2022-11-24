@@ -99,6 +99,7 @@ nav {
   }
   .menu-toggle.is-open &--close {
     display: block;
+    z-index: 9;
   }
 
   .menu-toggle:hover &--close,
@@ -131,6 +132,7 @@ nav {
     height: 100vh;
     display: block;
     overflow-y: scroll;
+    z-index: 9;
 
     padding: 48px 40px;
 
