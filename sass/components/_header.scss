@@ -79,6 +79,7 @@ nav {
   border: none;
 
   cursor: pointer;
+  z-index: 9;
 
   @media screen and (min-width: $tablet) {
     display: none;
@@ -99,7 +100,6 @@ nav {
   }
   .menu-toggle.is-open &--close {
     display: block;
-    z-index: 9;
   }
 
   .menu-toggle:hover &--close,

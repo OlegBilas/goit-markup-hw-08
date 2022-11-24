@@ -474,6 +474,7 @@ nav {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 9;
 }
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -494,7 +495,6 @@ nav {
 }
 .menu-toggle.is-open .menu-toggle__svg--close {
   display: block;
-  z-index: 9;
 }
 .menu-toggle:hover .menu-toggle__svg--close, .menu-toggle:focus .menu-toggle__svg--close {
   fill: #2196f3;
