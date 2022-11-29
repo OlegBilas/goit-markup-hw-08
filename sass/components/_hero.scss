@@ -1,6 +1,8 @@
 .section__hero {
   min-width: 480px;
-  //min-width: 100vw;
+  @media (max-width: $mobile - 1px) {
+    min-width: 100vw;
+  }
   min-height: 400px;
 
   padding-top: 200px;

@@ -1,10 +1,4 @@
 @charset "UTF-8";
-.our-team__list, .peculiarities__list {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -779,6 +773,11 @@ footer .social-list__svg {
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
+}
+@media (max-width: 479px) {
+  .section__hero {
+    min-width: 100vw;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section__hero {
