@@ -1259,6 +1259,7 @@ footer .social-list__svg {
 
 .portfolio__title {
   margin-left: 24px;
+  margin-right: 24px;
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
@@ -1267,7 +1268,11 @@ footer .social-list__svg {
 }
 
 .portfolio__text {
-  margin-left: 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  padding: 0 24px 20px;
   font-size: 16px;
   line-height: 1.88;
   color: #757575;
@@ -1290,10 +1295,23 @@ footer .social-list__svg {
         flex-basis: calc((100% - 60px) / 3);
   }
 }
+@media screen and (min-width: 768px) {
+  .portfolio__item:nth-child(2) .portfolio__text {
+    padding-bottom: 0px;
+  }
+  .portfolio__item:nth-child(2) .portfolio__thumb {
+    margin-bottom: 0px;
+  }
+}
 
 .portfolio__link {
-  display: block;
-  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
   border: 1px solid #eeeeee;
 }
@@ -1315,8 +1333,8 @@ footer .social-list__svg {
   width: 100%;
   height: 100%;
   padding: 77px 24px;
-  -webkit-transform: translateY(150%);
-          transform: translateY(150%);
+  -webkit-transform: translateY(105%);
+          transform: translateY(105%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
