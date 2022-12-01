@@ -1,6 +1,7 @@
 .portfolio {
   @media screen and(min-width: $tablet) {
     justify-content: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -8,7 +9,6 @@
 
 .portfolio__title {
   margin-left: 24px;
-  margin-right: 24px;
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -18,7 +18,6 @@
 }
 
 .portfolio__text {
-  flex-grow: 1;
   padding: 0 24px 20px;
 
   font-size: 16px;
@@ -39,27 +38,22 @@
   @media screen and(min-width: $desktop) {
     flex-basis: calc((100% - 2 * 30px) / 3);
   }
-  //не спрацьовує flex-grow на .portfolio__text
-  @media screen and(min-width: $tablet) {
-    &:nth-child(2) .portfolio__text {
-      padding-bottom: 0px;
-    }
-    &:nth-child(2) .portfolio__thumb {
-      margin-bottom: 0px;
-    }
-  }
 }
 
 .portfolio__link {
-  display: flex;
-  flex-direction: column;
-
+  display: block;
   text-decoration: none;
   border: 1px solid #eeeeee;
 
   &:hover,
   &:focus {
     animation: portfolio__link-hover $time-duration $timing-function forwards;
+  }
+}
+
+@media screen and(min-width: $tablet) and (max-width: $desktop - 1px) {
+  .portfolio__item:first-child .portfolio__link {
+    min-height: 440px;
   }
 }
 
