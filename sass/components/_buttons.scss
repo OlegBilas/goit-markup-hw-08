@@ -104,9 +104,9 @@
   width: 30px;
   height: 30px;
   background-color: transparent;
-  border: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  outline: transparent;
   transition: stroke $time-duration $timing-function;
 }
 
