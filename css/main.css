@@ -1262,11 +1262,17 @@ footer .social-list__svg {
 
 .portfolio__title {
   margin-left: 24px;
+  margin-right: 24px;
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__title {
+    margin-right: 0;
+  }
 }
 
 .portfolio__text {

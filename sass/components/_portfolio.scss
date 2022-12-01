@@ -9,6 +9,10 @@
 
 .portfolio__title {
   margin-left: 24px;
+  margin-right: 24px;
+  @media screen and(min-width: $desktop) {
+    margin-right: 0;
+  }
   margin-bottom: 4px;
 
   font-size: 18px;
