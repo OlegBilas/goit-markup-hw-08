@@ -19,10 +19,6 @@
 
 .portfolio__text {
   flex-grow: 1;
-  height: 100%;
-  // margin-left: 24px;
-  // margin-right: 24px;
-  // margin-bottom: 20px;
   padding: 0 24px 20px;
 
   font-size: 16px;
@@ -43,6 +39,7 @@
   @media screen and(min-width: $desktop) {
     flex-basis: calc((100% - 2 * 30px) / 3);
   }
+  //не спрацьовує flex-grow на .portfolio__text
   @media screen and(min-width: $tablet) {
     &:nth-child(2) .portfolio__text {
       padding-bottom: 0px;
@@ -56,14 +53,13 @@
 .portfolio__link {
   display: flex;
   flex-direction: column;
-  // height: 100%;
 
   text-decoration: none;
   border: 1px solid #eeeeee;
 
   &:hover,
   &:focus {
-    animation: portfolio__link-hover 250ms $timing-function forwards;
+    animation: portfolio__link-hover $time-duration $timing-function forwards;
   }
 }
 
@@ -72,13 +68,6 @@
   overflow: hidden;
   margin-bottom: 20px;
 }
-
-// .portfolio__thumb2 {
-//   // @media screen and(min-width: $tablet) and (max-width: $desktop - 1px) {
-//   flex-grow: 1;
-//   padding: 20px 24px;
-//   // }
-// }
 
 .portfolio-overlay {
   position: absolute;
@@ -97,7 +86,7 @@
   }
 
   transform: translateY(105%);
-  transition: transform 250ms $timing-function;
+  transition: transform $time-duration $timing-function;
 
   background: rgba(33, 150, 243, 0.9);
 

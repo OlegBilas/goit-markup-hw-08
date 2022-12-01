@@ -15,7 +15,7 @@
   }
 
   color: $header-color;
-  transition: color 250ms $timing-function;
+  transition: color $time-duration $timing-function;
 
   &:hover,
   &:focus,

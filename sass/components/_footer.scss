@@ -133,7 +133,7 @@ footer .social-list__svg {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  transition: transform 250ms $timing-function;
+  transition: transform $time-duration $timing-function;
 
   font-family: 'Roboto';
   font-size: 16px;

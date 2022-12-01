@@ -16,7 +16,7 @@
   height: 92px;
 
   color: $social-link-color;
-  transition: color 250ms $timing-function;
+  transition: color $time-duration $timing-function;
   border: 1px solid $social-link-color;
   border-radius: 4px;
 

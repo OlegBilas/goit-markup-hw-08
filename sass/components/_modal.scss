@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
 
-  transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
+  transition: opacity $time-duration $timing-function, visibility $time-duration $timing-function;
 
   background: rgba(0, 0, 0, 0.2);
 }
@@ -35,7 +35,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+  transition: transform $time-duration $timing-function, opacity $time-duration $timing-function;
 
   .backdrop.is-hidden & {
     opacity: 0;
@@ -92,7 +92,7 @@
   border-radius: 4px;
   outline: none;
 
-  transition: border 250ms $timing-function, box-shadow 250ms $timing-function;
+  transition: border $time-duration $timing-function, box-shadow $time-duration $timing-function;
 
   &:focus {
     border-color: $accent-color;
@@ -106,7 +106,7 @@
   top: 28px;
   left: 12px;
 
-  transition: fill 250ms $timing-function;
+  transition: fill $time-duration $timing-function;
 
   .inputs-field__input:focus + & {
     fill: $accent-color;
@@ -173,7 +173,7 @@
 
 .agreement-field__accept {
   opacity: 0;
-  transition: opacity 250ms $timing-function;
+  transition: opacity $time-duration $timing-function;
 
   .agreement-field__input:checked ~ & {
     opacity: 1;
@@ -182,7 +182,7 @@
 
 .agreement-field__no-accept {
   opacity: 1;
-  transition: opacity 250ms $timing-function;
+  transition: opacity $time-duration $timing-function;
 
   .agreement-field__input:checked ~ & {
     opacity: 0;
