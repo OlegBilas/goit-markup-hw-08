@@ -49,4 +49,10 @@
       margin-bottom: 30px;
     }
   }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
 }
