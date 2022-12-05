@@ -10,9 +10,7 @@
 .portfolio__title {
   margin-left: 24px;
   margin-right: 24px;
-  @media screen and(min-width: $desktop) {
-    margin-right: 0;
-  }
+
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -31,6 +29,8 @@
 }
 
 .portfolio__item {
+  display: flex;
+  flex-direction: column;
   @media screen and(max-width: $tablet - 1px) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -45,7 +45,8 @@
 }
 
 .portfolio__link {
-  display: block;
+  flex-grow: 1;
+
   text-decoration: none;
   border: 1px solid #eeeeee;
 
@@ -55,11 +56,11 @@
   }
 }
 
-@media screen and(min-width: $tablet) and (max-width: $desktop - 1px) {
-  .portfolio__item:first-child .portfolio__link {
-    min-height: 440px;
-  }
-}
+// @media screen and(min-width: $tablet) and (max-width: $desktop - 1px) {
+//   .portfolio__item:first-child .portfolio__link {
+//     min-height: 440px;
+//   }
+// }
 
 .portfolio__thumb {
   position: relative;
