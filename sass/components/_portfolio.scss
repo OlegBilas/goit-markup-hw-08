@@ -62,6 +62,10 @@
   margin-bottom: 20px;
 }
 
+.portfolio__thumb > img {
+  object-fit: cover;
+}
+
 .portfolio-overlay {
   position: absolute;
   top: 0;

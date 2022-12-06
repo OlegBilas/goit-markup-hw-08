@@ -1333,6 +1333,11 @@ footer .social-list__svg {
   margin-bottom: 20px;
 }
 
+.portfolio__thumb > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .portfolio-overlay {
   position: absolute;
   top: 0;
