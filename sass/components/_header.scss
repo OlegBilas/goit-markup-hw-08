@@ -109,10 +109,8 @@ nav {
   .menu-toggle.is-open &--close {
     display: block;
   }
-  .menu-toggle:hover &--close,
-  .menu-toggle:focus &--close,
-  .menu-toggle:hover &--open,
-  .menu-toggle:focus &--open {
+  .menu-toggle:hover &,
+  .menu-toggle:focus & {
     fill: $accent-color;
   }
 }
