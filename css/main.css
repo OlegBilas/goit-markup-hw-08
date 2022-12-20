@@ -505,9 +505,8 @@ nav {
 .menu-toggle.is-open .menu-toggle__svg--close {
   display: block;
 }
-.menu-toggle:hover .menu-toggle__svg--close, .menu-toggle:focus .menu-toggle__svg--close {
+.menu-toggle:hover .menu-toggle__svg--close, .menu-toggle:focus .menu-toggle__svg--close, .menu-toggle:hover .menu-toggle__svg--open, .menu-toggle:focus .menu-toggle__svg--open {
   fill: #2196f3;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
