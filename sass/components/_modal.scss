@@ -4,7 +4,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-
+  z-index: 100;
+  
   transition: opacity $time-duration $timing-function, visibility $time-duration $timing-function;
 
   background: rgba(0, 0, 0, 0.2);
@@ -23,6 +24,10 @@
 
   width: 450px;
   height: 609px;
+    
+  @media screen and(max-width: $mobile - 1px) {
+    width: calc(450px / 480px * 100vw);
+  }
   @media screen and(min-width: $desktop) {
     width: 528px;
     height: 581px;
@@ -81,6 +86,9 @@
 
   width: 370px;
   height: 40px;
+  @media screen and(max-width: $mobile - 1px) {
+    width: 100%
+  }
   @media screen and(min-width: $desktop) {
     width: 448px;
   }
