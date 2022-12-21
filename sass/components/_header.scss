@@ -87,28 +87,15 @@ nav {
   border: none;
 
   cursor: pointer;
-  z-index: 9;
-
+   
   @media screen and (min-width: $tablet) {
     display: none;
   }
 }
 
 .menu-toggle__svg {
-  &--open {
-    display: block;
-  }
-  .menu-toggle.is-open &--open {
-    display: none;
-  }
-
-  &--close {
-    display: none;
     transition: fill $time-duration $timing-function;
-  }
-  .menu-toggle.is-open &--close {
-    display: block;
-  }
+
   .menu-toggle:hover &,
   .menu-toggle:focus & {
     fill: $accent-color;
@@ -120,7 +107,7 @@ nav {
     display: none;
     opacity: 0;
     transform: scale(0.4);
-    transition: transform $time-duration $timing-function;
+    transition: opacity $time-duration $timing-function, transform $time-duration $timing-function;
   }
 
   @media screen and (min-width: $tablet) {
