@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  
+
   transition: opacity $time-duration $timing-function, visibility $time-duration $timing-function;
 
   background: rgba(0, 0, 0, 0.2);
@@ -24,8 +24,8 @@
 
   width: 450px;
   height: 609px;
-    
-  @media screen and(max-width: $mobile - 1px) {
+
+  @media screen and(max-width: $mobile-1px) {
     width: calc(450px / 480px * 100vw);
   }
   @media screen and(min-width: $desktop) {
@@ -86,8 +86,8 @@
 
   width: 370px;
   height: 40px;
-  @media screen and(max-width: $mobile - 1px) {
-    width: 100%
+  @media screen and(max-width: $mobile-1px) {
+    width: 100%;
   }
   @media screen and(min-width: $desktop) {
     width: 448px;
@@ -166,7 +166,7 @@
   }
 }
 
-.agreement-field__accept{
+.agreement-field__accept {
   display: inline-block;
 
   position: absolute;
@@ -175,22 +175,21 @@
 
   transform: translateY(-50%);
 
-  border: 2px solid  $main-color;
+  border: 2px solid $main-color;
   border-radius: 2px;
   transition: border $time-duration $timing-function;
 
-  &-icon{
+  &-icon {
     opacity: 0;
     transition: opacity $time-duration $timing-function;
   }
   .agreement-field__input:checked + & {
     border: transparent;
   }
-  .agreement-field__input:checked + & > &-icon{
+  .agreement-field__input:checked + & > &-icon {
     opacity: 1;
   }
 }
-
 
 .agreement-field__link {
   color: $accent-color;
